@@ -5,8 +5,8 @@ using namespace std;
 using namespace cv;
 
 int main(int argc, char const *argv[]) {
-  Mat img1 = imread("./img/box.png"), gray1;
-  Mat img2 = imread("./img/box_in_scene.png"), gray2;
+  Mat img1 = imread("../../img/box.png"), gray1;
+  Mat img2 = imread("../../img/box_in_scene.png"), gray2;
   cvtColor(img1, gray1, COLOR_BGR2GRAY);
   cvtColor(img2, gray2, COLOR_BGR2GRAY);
 

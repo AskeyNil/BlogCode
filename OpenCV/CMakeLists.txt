@@ -6,6 +6,17 @@ add_compile_options(-std=c++11)
 include(CTest)
 enable_testing()
 
+# 设置输出目录为 build/Debug/bin build/Debug/lib
+#set(OUTPUT_DIRECTORY_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE})
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}/bin" CACHE PATH "Runtime directory" FORCE)
+#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}/lib" CACHE PATH "Library directory" FORCE)
+#set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}/lib" CACHE PATH "Archive directory" FORCE)
+
+# 设置输出目录为bin
+set(OUTPUT_DIRECTORY_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}" CACHE PATH "Runtime directory" FORCE)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}" CACHE PATH "Library directory" FORCE)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY_ROOT}" CACHE PATH "Archive directory" FORCE)
 
 set(OpenCV_DIR /home/askeynil/devtools/libs/opencv-3.4.7/share/OpenCV)
 find_package(OpenCV REQUIRED)
