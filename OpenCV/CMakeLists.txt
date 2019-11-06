@@ -18,7 +18,7 @@ message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
 add_executable(Main main.cc)
 add_subdirectory(cc)
-
+add_subdirectory(FeatureMatching)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
