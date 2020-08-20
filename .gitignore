@@ -235,3 +235,6 @@ dmypy.json
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,python,c++,visualstudiocode,opencv
+
+
+.history
